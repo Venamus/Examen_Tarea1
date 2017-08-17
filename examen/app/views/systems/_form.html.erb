@@ -1,0 +1,40 @@
+<%= form_for(system) do |f| %>
+  <% if system.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(system.errors.count, "error") %> prohibited this system from being saved:</h2>
+
+      <ul>
+      <% system.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="master-container">
+<div class="inner-container">
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :planets %>
+    <%= f.number_field :planets %>
+  </div>
+</div>
+<div class="inner-container">
+  <div class="field">
+    <%= f.label :moons %>
+    <%= f.number_field :moons %>
+  </div>
+
+  <div class="field">
+    <%= f.label :stars %>
+    <%= f.number_field :stars %>
+  </div>
+</div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+</div>  
+<% end %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<div class="show-view">
+  <p>Name:</p>
+  <span><%= @system.name %></span>
+</div>
+
+<div class="show-view">
+  <p>Planets:</p>
+  <span><%= @system.planets %></span>
+</div>
+
+<div class="show-view">
+  <p>Moons:</p>
+  <span><%= @system.moons %></span>
+</div>
+
+<div class="show-view">
+  <p>Stars:</p>
+  <span><%= @system.stars %></span>
+</div>
+
+<%= link_to 'Edit', edit_system_path(@system) %> |
+<%= link_to 'Back', systems_path %>
